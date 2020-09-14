@@ -24,16 +24,14 @@ set fileencoding=utf-8
 
 set number
 
+set mouse=a
+
 filetype plugin indent on
 set backspace=indent,eol,start
 
 " NERDTree plugin specific commands
 :nnoremap <C-g> :NERDTreeToggle<CR>
 :nmap tt <Plug>MavenRunUnittest
-
-let g:maven_keymaps=1
-
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 call plug#begin('~/.vim/plugged')
 " Make sure you use single quotes
@@ -43,9 +41,6 @@ Plug 'junegunn/vim-easy-align'
 
 " Any valid git URL is allowed
 Plug 'https://github.com/junegunn/vim-github-dashboard.git'
-
-" Multiple Plug commands can be written in a single line using | separators
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'itchyny/lightline.vim'
 
@@ -63,10 +58,6 @@ Plug 'tpope/vim-commentary'
 
 Plug 'tpope/vim-sensible'
 
-Plug 'mikelue/vim-maven-plugin'
-
-Plug 'artur-shaik/vim-javacomplete2'
-
 " Initialize plugin system
 call plug#end()
 
@@ -82,22 +73,5 @@ let g:lightline = {
       \ }
 
 colorscheme nord
-
-
-nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
-
-imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
-
-nmap <F5> <Plug>(JavaComplete-Imports-Add)
-
-imap <F5> <Plug>(JavaComplete-Imports-Add)
-
-nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
-
-imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
-
-nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
-
-imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 

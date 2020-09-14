@@ -9,35 +9,6 @@ export ZSH="/Users/jpringle/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="agnoster"
-ZSH_THEME="powerlevel9k/powerlevel9k"
-#POWERLEVEL9K_MODE='awesome-patched' 
-
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="$ "
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-
-POWERLEVEL9K_DATE_ICON=""
-POWERLEVEL9K_EXECUTION_TIME_ICON=""
-POWERLEVEL9K_DISK_ICON=""
-POWERLEVEL9K_LOCK_ICON=""
-POWERLEVEL9K_TIME_ICON=""
-POWERLEVEL9K_VCS_BRANCH_ICON=""
-POWERLEVEL9K_VCS_COMMIT_ICON=""
-POWERLEVEL9K_BATTERY_ICON=""
-POWERLEVEL9K_VCS_GIT_BITBUCKET_ICON=""
-POWERLEVEL9K_VCS_GIT_ICON=""
-POWERLEVEL9K_VCS_UNSTAGED_ICON=""
-POWERLEVEL9K_VCS_STAGED_ICON=""
-POWERLEVEL9K_VCS_STASH_ICON="硫"
-POWERLEVEL9K_VCS_UNTRACKED_ICON=""
-POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=""
-POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=""
-POWERLEVEL9K_HOME_ICON=""
-POWERLEVEL9K_HOME_SUB_ICON=""
-POWERLEVEL9K_FOLDER_ICON=""
 
 ZSH_TMUX_AUTOSTART='false'
 # Set list of themes to pick from when loading at random
@@ -98,19 +69,11 @@ ZSH_TMUX_AUTOSTART='false'
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker tmux zsh-docker-run) 
+plugins=(git docker tmux) 
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-
-function cqlsh {
-  run_with_docker "cassandra" "latest" "cqlsh" $@
-}
-
-function psql {
-  run_with_docker "postgres" "latest" "psql" $@
-}
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
